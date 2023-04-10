@@ -17,8 +17,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jpe?g|gif)$/i, // we don't need rules for .js or .json files, because webpack knows how to handle them, but for images we need to specify how they should be handled
-        type: 'asset/resource', // asset/resource will create new file/resource, but if we replace with asset/inline, instead of new file the image would be converted to base64 and added to the javascript bundle file
+        /*
+          We don't need rules for .js or .json files, because webpack knows how to handle them, but for images we need to specify how they should be handled.
+          But this is not the case if our .js files are including some latest javascript features. In that case we will need Babel loader. For simple javascript supported by all browsers we can rely on the defaults
+        */
+        test: /\.(png|jpe?g|gif)$/i,
+        /*
+          asset/resource will create new file/resource, but if we replace with asset/inline, instead of new file the image would be converted to base64 and added to the javascript bundle file
+          asset types are included in webpack by default, but if we want to handle scss files for example, we will need to install additional loaders packages
+        */
+        type: 'asset/resource',
       },
     ],
   },
