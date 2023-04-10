@@ -13,7 +13,7 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/, // if the file extension matches this regex, use the below loaders
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'sass-loader'], // loaders are processed from right to left, which means sass-loader will be the first running
       },
     ],
   },
