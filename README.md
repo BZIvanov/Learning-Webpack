@@ -1,6 +1,9 @@
 ## Learning Webpack
 
-### Basics
+#### Learning path
 
-1. Generate `main.js` file with default configuration
-   - `mode` provided as a cli command
+When learning the different sections you should follow this order:
+
+- EntryModeAndOutput
+- Loaders
+- Plugins

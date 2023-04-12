@@ -1,5 +1,3 @@
-## Webpack
-
 Run the build command from `package.json` to use webpack.
 
 ```bash
