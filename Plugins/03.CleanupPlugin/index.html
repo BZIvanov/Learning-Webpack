@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./dist/styles.css" />
-    <title>Webpack demo</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <script src="./dist/bundle.js"></script>
+    <h1>This is my html template</h1>
+    <p>
+      By default the htlm plugin is using ejs as template engine so in this case
+      we use ejs syntax to inject the title tag value.
+    </p>
   </body>
 </html>
