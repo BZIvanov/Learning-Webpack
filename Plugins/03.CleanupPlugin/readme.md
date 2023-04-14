@@ -15,3 +15,10 @@ _Note: contnenthash and some other plugins are not recommended to use in develop
 After we changed the file names to contain hashes we can't use hardcoded file name as import in the html file, because the file name will be different after each build.
 
 To solve this issue we will use one more plugin: html plugin.
+
+## Dev server
+
+In the package.json file the _dev_ script will start the dev server.
+With the dev server we don't need to provide --watch flag to Webpack, because the dev server has ots own watcher.
+With the current setup in the Webpack config file the dev server will create the files in memory, not in the dist folder.
+Running the dev server with `npm run dev` will allow us to see the changes we made to the files without reruning the build.

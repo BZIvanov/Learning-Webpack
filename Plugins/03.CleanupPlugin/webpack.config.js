@@ -44,4 +44,9 @@ module.exports = {
       title: 'My Custom Page Title',
     }),
   ],
+  // with the package webpack-dev-server we can configure custom dev server, more info in the md file
+  devServer: {
+    port: 3000,
+    hot: true,
+  },
 };
