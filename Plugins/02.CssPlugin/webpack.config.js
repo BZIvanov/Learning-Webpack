@@ -9,7 +9,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name][contenthash].js', // contenthash is helpful for browser caching, read the md file for more info
+    filename: '[name].js',
   },
   module: {
     rules: [
@@ -32,7 +32,7 @@ module.exports = {
     // this plugin will extract the css in separate file, otherwise it will be in the javascript bundle
     // all the css from all the styles files in our app will be bundled in this css file
     new MiniCssExtractPlugin({
-      filename: 'styles[contenthash].css',
+      filename: 'styles.css',
     }),
   ],
 };

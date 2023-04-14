@@ -2,6 +2,7 @@ const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -10,7 +11,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name][contenthash].js',
+    filename: '[name][contenthash].js', // contenthash is helpful for browser caching, read the md file for more info
   },
   module: {
     rules: [
@@ -38,5 +39,9 @@ module.exports = {
       check the plugin documentation for additional configuration
     */
     new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      title: 'My Custom Page Title',
+    }),
   ],
 };
