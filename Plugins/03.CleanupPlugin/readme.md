@@ -8,6 +8,8 @@ And we solve the above issue by adding to content hash to the file bundle name. 
 
 That is why in the Webpack config files we added \[contenthash\] which will generate new unique hash everytime we make changes to the code and build the application.
 
+_Note: contnenthash and some other plugins are not recommended to use in development mode. This is because we want to build process during development to be faster. So dpepending if the mode is development or production we should have conditional configuration options or 2 different webpack config files to either use or not hashed and some of the plugins._
+
 ## Dynamic html template and imports
 
 After we changed the file names to contain hashes we can't use hardcoded file name as import in the html file, because the file name will be different after each build.
