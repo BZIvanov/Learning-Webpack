@@ -1,0 +1,10 @@
+ul.nav-menu {
+  display: flex;
+  background-color: lightblue;
+}
+
+ul.nav-menu > li {
+  color: darkviolet;
+  margin-inline: 15px;
+  list-style-type: none;
+}
